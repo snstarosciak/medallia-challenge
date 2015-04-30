@@ -1,0 +1,325 @@
+// Contact information
+body {
+	font:18px 'proxima_novalight', arial, sans-serif;
+}
+
+section {
+	display:block;
+}
+
+.display-none {
+	display:none;
+}
+
+.launchpad-block {
+	background:#19B3E9;
+	min-height:514px;
+	overflow:hidden;
+	
+	// Contact info
+	.contact-block {
+		margin:30px auto 0 auto;
+		width: $desktopWidth;
+		color:#FFF;
+		position:relative;
+		font-size:18px;
+		
+		a {
+			color:#FFF;
+			text-decoration:none;
+		}
+		
+		.phone {
+			display:block;
+			right:0;
+			position:absolute;
+			font-family:proxima_novabold, arial, sans-serif;
+			
+			&:before {
+				@include fontAwesomeBase();
+				content:"\f095";
+				margin-right:5px;
+			}
+		}
+		
+		.email {
+			display:block;
+			float:left;
+			font-family:proxima_novabold, arial, sans-serif;
+			
+			&:before {
+				@include fontAwesomeBase();
+				content:"\f0e0";
+				margin-right:5px;
+			}
+		}
+	}
+	
+	.launchpad-main {
+		text-align:center;
+		color:#FFF;
+		margin:120px 0 0 0;
+		
+		h1 {
+			text-transform:uppercase;
+			line-height:1;
+			margin:15px 20px 0 20px;
+			font:30px proxima_novabold, arial, sans-serif;
+		}
+		
+		h2 {
+			font:30px proxima_novalight, arial, sans-serif;
+			margin-top:0;
+		}
+	}
+}
+
+// Happy guests
+.happy-guests {
+	background:#0D2D37;
+	width:100%;
+	position:relative;
+	text-align:center;
+	color:#FFF;
+	height:253px;
+	
+	.inner {
+		position:absolute;
+		width:100%;
+		left:50%;
+		margin-left:-50%;
+		background:url('images/happy-customers-bg.png') no-repeat top center;
+		height:156px;
+		top:-147px;
+		
+		.content {
+		margin:75px auto 0 auto;
+		width: $desktopWidth;
+		height:268px;
+		
+		h3 {
+			font:30px proxima_novalight, arial, sans-serif;
+			margin:20px 0 0 0;
+		}
+		
+		h4 {
+			font:18px proxima_novalight, arial, sans-serif;
+			margin:0;
+			line-height:144%;
+		}
+	}
+	}
+	
+	
+}
+
+// Carousel Block
+.carousel-block {
+	background:#071B22;
+	width:100%;
+	min-height:146px;
+	position:relative;
+	margin-top:-90px;
+	&:before {
+		background: url("images/carousel-bg-top.png") no-repeat center;
+		top:-138px;
+		content:'';
+		position:absolute;
+		left:50%;
+		width:100%;
+		height:144px;
+		margin-left:-50%;
+	}
+	
+	&:after {
+		background: url("images/carousel-bg-bottom.png") no-repeat center;
+		bottom: -108px;
+		content: '';
+		position: absolute;
+		left: 50%;
+		width: 100%;
+		height: 118px;
+		margin-left: -50%;
+		z-index: -1;
+	}
+	
+	.carousel {
+		margin:90px auto 0 auto;
+	}
+	
+	.contact-btn {
+		@include medallia-btn();
+		width:117px;
+		margin-top:16px;
+		position:relative;
+		overflow:hidden;
+		
+		&:before {
+			@include fontAwesomeBase();
+			content:"\f0e0";
+			font-size:22px;
+			position:absolute;
+			top:-22px;
+			left:50%;
+			margin-left:-11px;
+			@include vendor-transition(.2s ease-in-out);
+		}
+		
+		&:hover {
+			color:#3CC0EC;
+			&:before {
+				color:#fff;
+				@include vendor-transform(translate3d(0, 40px, 0));
+				margin-top:-6px;
+			}
+		}
+	}
+}
+
+// CSS background images for retina displays
+@media
+only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (   min--moz-device-pixel-ratio: 2),
+only screen and (     -o-min-device-pixel-ratio: 2/1),
+only screen and (        min-device-pixel-ratio: 2),
+only screen and (                min-resolution: 192dpi),
+only screen and (                min-resolution: 2dppx) { 
+	.carousel-block {
+		&:before {
+			background: url("images/carousel-bg-top-2x.png") no-repeat center;
+			background-size:1400px 144px;
+		}
+		
+		&:after {
+			background: url("images/carousel-bg-bottom-2x.png") no-repeat center;
+			background-size:1400px 144px;
+			height:144px;
+		}
+	}
+	
+	.happy-guests {
+		.inner {
+			background: url("images/happy-customers-bg-2x.png") no-repeat center;
+			height:157px;
+			background-size:1512px 157px;
+		}
+	}
+}
+
+// CSS background images for retina displays
+@media
+only screen and (-webkit-min-device-pixel-ratio: 3),
+only screen and (   min--moz-device-pixel-ratio: 3),
+only screen and (     -o-min-device-pixel-ratio: 3/1),
+only screen and (        min-device-pixel-ratio: 3),
+only screen and (                min-resolution: 192dpi),
+only screen and (                min-resolution: 3dppx) { 
+	.carousel-block {
+		&:before {
+			background: url("images/carousel-bg-top-3x.png") no-repeat center;
+			background-size:1400px 144px;
+		}
+		
+		&:after {
+			background: url("images/carousel-bg-bottom-3x.png") no-repeat center;
+			background-size:1400px 144px;
+			height:144px;
+		}
+	}
+	
+	.happy-guests {
+		.inner {
+			background: url("images/happy-customers-bg-3x.png") no-repeat center;
+			height:157px;
+			background-size:1512px 157px;
+		}
+	}
+}
+
+.testimonials {
+	margin:125px 0 25px 0;
+	
+	.content {
+		width:$desktopWidth;
+		margin:0 auto;
+		
+		.testimonials-list {
+			list-style-type:none;
+			overflow:hidden;
+			margin-bottom:0;
+			padding-left:0;
+		
+			li {
+				text-align:center;
+				margin-bottom:20px;
+				float:left;
+				width:425px;
+				color:#333333;
+				margin-right:45px;
+				overflow:hidden;
+				font-family:'proxima_novalight', arial, sans-serif;
+				
+				&.no-right-margin {
+					margin-right:0;
+				}
+				
+				.img-container {
+					height:101px;
+					line-height:101px;
+					
+					img {
+						vertical-align:bottom;
+					}
+					
+					&.best-western {
+						line-height:69px;
+						height:69px;
+					}
+				}
+				
+				p {
+					margin-bottom:0;
+				}
+				
+				&.center-that {
+					clear:both;
+					float:none;
+					margin:0 auto 20px auto;
+				}
+				
+				blockquote {
+					font-size:18px;
+					line-height:144%;
+					margin:20px 0 0 0;
+				}
+				
+				cite {
+					font-family:'proxima_novabold', arial, sans-serif;
+					font-size:14px;
+					font-style:normal;
+					display:block;
+				}
+			}
+		}
+	}
+}
+
+// Footer
+.footer {
+	background:#CECECE;
+	color:#FFF;
+	padding:15px 0;
+	font:14px 'proxima_novalight', arial, sans-serif;
+	
+	.content {
+		width:$desktopWidth;
+		text-align:center;
+		margin:0 auto;
+		letter-spacing:1px;
+		
+		a {
+			text-decoration:none;
+			color:#FFF;
+		}
+	}
+}

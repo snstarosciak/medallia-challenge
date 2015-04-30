@@ -1,0 +1,25 @@
+{
+  "name": "medallia",
+  "version": "0.0.1",
+  "authors": [
+    "Stevie <snstarosciak@gmail.com>"
+  ],
+  "description": "Medallia Launchpad page",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bourbon": "~4.2.1",
+    "jquery-legacy": "jquery#^1",
+    "normalize.scss": "~3.0.2+normalize.3.0.2"
+  },
+  "devDependencies": {
+    "html5shiv": "~3.7.2"
+  }
+}

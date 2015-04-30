@@ -1,0 +1,274 @@
+/** ============================================================================
+	Mobile, tablet, Desktop
+	============================================================================ */
+@media only screen and (min-width: 0px) and (max-width: 960px) {
+
+	.launchpad-block {
+	
+		.contact-block {
+			width:95%;
+			margin:30px 20px;
+		}
+	}
+
+	.happy-guests {
+		.inner {
+			width:100%;
+			left:50%;
+			margin-left:-50%;
+			
+			.content {
+				width:60%;
+			}
+		}
+	}
+	
+	.carousel-block {
+			.carousel {
+				width:$mobileWidth;
+				
+				.tabs-content {
+					
+				}
+				
+				.img-shell {
+					width:50%;
+				}
+			}
+	}
+	
+	.testimonials {
+		margin-top:161px;
+		
+		.content {
+			width:$mobileWidth;
+			
+			.testimonials-list {
+				li {
+					float:none;
+					width:80%;
+					margin:0 auto 50px auto;
+					
+					.img-container {
+						height:inherit;
+						line-height:inherit;
+					}
+					
+					&.no-right-margin {
+						margin-right:auto;
+					}
+				}
+			}
+		}
+	}
+	
+	.footer {
+		.content {
+			width:90%;
+			margin:0 auto;
+		}
+	}
+	
+}
+
+
+/** ============================================================================
+	Carousel Specific
+	============================================================================ */
+@media only screen and (max-width: 850px) {
+	.carousel-block {
+		.carousel-inner {
+			.carousel {
+				.tabs-content {
+					margin:auto;
+					position:relative;
+					width:100%;
+					left:0;
+				}
+				
+				.img-shell {
+					margin:0 auto;
+					float:none;
+					
+					.image-small {
+						left:50%;
+						margin:-66.5px 0 0 -64px;
+						top:50%;
+					}
+				}
+				
+				.image-summary-content {
+					position:relative;
+					text-align:center;
+					margin:20px auto 0 auto;
+					
+					.icon {
+						display:none;
+					}
+				}
+				
+			}
+		}
+	}
+}
+
+@media only screen and (max-width: 458px) {
+	.carousel-block { 
+		.carousel-inner {
+			.carousel {
+				.previous,
+				.next {
+					top:0;
+				}
+				
+				.tabs-content {
+					top:-90px;
+				}
+			}
+		}
+	}
+	
+	
+}
+
+@media only screen and (max-width: 458px) {
+	.carousel-block { 
+		.carousel-inner {
+			.carousel {
+				.previous,
+				.next {
+					top:62px;
+				}
+				
+				.tabs-content {
+					top:-20px;
+				}
+			}
+		}
+		
+		&:after {
+		}
+	}	
+}
+
+/** ============================================================================
+	Launchpad Block Specific
+	============================================================================ */
+@media only screen and (max-width: 407px) {
+	.launchpad-block {
+		min-height:583px;
+		
+		.contact-block {
+			.email {
+				text-align:center;
+				float:none;
+			}
+			
+			.phone {
+				position:relative;
+				text-align:center;
+				margin-top:8px;
+			}
+		}
+		
+		.launchpad-main {
+			margin-top:38px;
+		}
+	}
+	
+}
+
+/** ============================================================================
+	Happy Guests Specific
+	============================================================================ */
+@media only screen and (max-width: 350px) {
+	.happy-guests {
+		height:265px;
+	}
+	
+
+}
+
+/** ============================================================================
+	MOBILE ONLY
+	============================================================================ */
+@media only screen and (min-width: 0px) and (max-width: 480px) {
+	.image-large {
+		display:none;
+	}
+	
+	.image-small {
+		
+	}
+	
+	.testimonials {
+		.content { 
+			.testimonials-list {
+				li {
+					cite {
+						line-height:140%;
+					}
+				}
+			}
+		}
+	}
+	
+	.person {
+		display:block;
+		margin-top:4px;
+	}
+	
+	.comma {
+		display:none;
+	}
+			
+	.carousel-block {
+		.carousel-inner {
+			.carousel {
+				
+				.img-shell {
+					width:100%;
+				}
+				
+				.image-summary-content {
+					text-align:center;
+					width:90%;
+					margin:10px 10px 0 10px;
+				}
+			}
+		}
+		
+		&:after {
+			bottom:-48px;
+		}
+	
+		&:before {
+			top:-58px;
+		}
+	}
+	
+	.testimonials {
+		margin-top:97px;
+		
+		.content {
+			.testimonials-list {
+				li {
+					margin-bottom:29px;
+				}
+			}
+		}
+	}
+	
+	.footer {
+		.content {
+			.mid-dot {
+				display:none;
+			}
+			
+			.links {
+				line-height:143%;
+				display:block;
+			}
+		}
+	}
+}

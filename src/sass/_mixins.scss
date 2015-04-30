@@ -1,0 +1,56 @@
+@mixin vendor-transition($transition) {
+  -webkit-transition: $transition;
+  -moz-transition: $transition;
+  -ms-transition: $transition;
+  -o-transition: $transition;
+  transition: $transition;
+}
+
+@mixin vendor-transform($transform) {
+  -webkit-transform: $transform;
+  -moz-transform: $transform;
+  -ms-transform: $transform;
+  -o-transform: $transform;
+  transform: $transform;
+}
+
+@mixin vendor-transform-origin($origin) {
+	-webkit-transform-origin: $origin;
+  -moz-transform-origin: $origin;
+  -ms-transform-origin: $origin;
+  -o-transform-origin: $origin;
+  transform-origin: $origin;
+}
+
+@mixin fontAwesomeBase() {
+	font-family: FontAwesome;
+	font-weight: normal;
+	font-style: normal;
+	display: inline-block;
+	text-decoration: inherit;
+}
+
+@mixin blank-button() {
+  background:none;
+  border:none;
+}
+
+@mixin medallia-btn() {
+	background: #19B3E9;
+	font: 14px 'proxima_novabold', arial, sans-serif;
+	text-align: center;
+	border-radius: 6px;
+	text-decoration: none;
+	/* display: block; */
+	color: #FFF;
+	padding: 15px 0px;
+	border: none;
+	text-transform: uppercase;
+	width: 117px;
+	display: inline-block;
+	@include vendor-transition(.15s ease-in-out);
+	
+	&:hover {
+		background:#3CC0EC;
+	}
+}
